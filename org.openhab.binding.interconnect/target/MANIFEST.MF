@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.openhab.binding.interconnect;singleton:=true
+Bundle-Name: Interconnect Binding
+Bundle-Version: 2.3.0.201807171025
+Bundle-ClassPath: .
+Require-Bundle: org.eclipse.smarthome.core.thing,org.eclipse.smarthome
+ .core,org.eclipse.smarthome.io.net,com.google.gson
+Bundle-ActivationPolicy: lazy
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: openHAB
+Import-Package: org.eclipse.jdt.annotation;resolution:=optional,org.ec
+ lipse.smarthome.config.core,org.eclipse.smarthome.core.library.types,
+ org.eclipse.smarthome.core.thing,org.eclipse.smarthome.core.thing.bin
+ ding,org.eclipse.smarthome.core.thing.binding.builder,org.eclipse.sma
+ rthome.core.thing.type,org.eclipse.smarthome.core.types,org.eclipse.s
+ marthome.core.util,org.slf4j
+Service-Component: OSGI-INF/*.xml
+

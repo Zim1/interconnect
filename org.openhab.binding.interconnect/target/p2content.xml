@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='org.openhab.binding.interconnect' version='2.3.0.201807171025'>
+    <update id='org.openhab.binding.interconnect' range='[0.0.0,2.3.0.201807171025)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='Interconnect Binding'/>
+      <property name='org.eclipse.equinox.p2.provider' value='openHAB'/>
+      <property name='maven-groupId' value='org.openhab.binding'/>
+      <property name='maven-artifactId' value='org.openhab.binding.interconnect'/>
+      <property name='maven-version' value='2.3.0-SNAPSHOT'/>
+    </properties>
+    <provides size='3'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.openhab.binding.interconnect' version='2.3.0.201807171025'/>
+      <provided namespace='osgi.bundle' name='org.openhab.binding.interconnect' version='2.3.0.201807171025'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='14'>
+      <required namespace='osgi.bundle' name='org.eclipse.smarthome.core.thing' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.smarthome.core' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.smarthome.io.net' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.google.gson' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.jdt.annotation' range='0.0.0' optional='true' greedy='false'/>
+      <required namespace='java.package' name='org.eclipse.smarthome.config.core' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.smarthome.core.library.types' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.smarthome.core.thing' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.smarthome.core.thing.binding' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.smarthome.core.thing.binding.builder' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.smarthome.core.thing.type' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.smarthome.core.types' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.smarthome.core.util' range='0.0.0'/>
+      <required namespace='java.package' name='org.slf4j' range='0.0.0'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='org.openhab.binding.interconnect' version='2.3.0.201807171025'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: org.openhab.binding.interconnect;singleton:=true&#xA;Bundle-Version: 2.3.0.201807171025&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

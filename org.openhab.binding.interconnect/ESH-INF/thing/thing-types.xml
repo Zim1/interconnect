@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="interconnect"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+    xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+   <thing-type id="Knoten">
+        <label>OpenHabInterconnect Binding Thing</label>
+        <description>Sample thing for OpenHabInterconnect Binding</description>
+
+        <channels>
+            <channel id="Switch" typeId="Switch" /><channel typeId="Number" id="Number"></channel>
+        </channels>
+
+        <config-description>
+          <parameter name="sitemapName" type="text" required="true">
+                <label>Name for site map</label>
+                <description>Name for site map which will view remote items.</description>
+                <default>Remote Node #1</default>
+            </parameter>
+            <parameter name="refreshTime" type="text" required="true">
+                <label>RefreshTime</label>
+                <description>Refreshtime in secounds.</description>
+                <default>60</default>
+            </parameter>
+            <parameter name="nodeIPAddress" type="text" required="true">
+                <label>NodeIPAddress</label>
+                <default>0.0.0.0</default>
+            </parameter>
+            <parameter name="port" type="text" required="true">
+                <label>Port</label>
+                <default>8080</default>
+            </parameter>
+            <parameter name="systemFolderPath" type="text" required="true">
+                <label>OpenHab configurationfolder path</label>
+                <description>Path to configurationfolder items,sitemaps, things, etc.  #e.g. /etc/openhab</description>
+            </parameter>
+            <parameter name="itemSelection" type="text" required="true">
+                <label>Item selection</label>
+                <limitToOptions>false</limitToOptions>
+                <advanced>true</advanced>
+                <options>
+                    <option value="0">Default</option>
+                    <option value="1">Sitemaps.All</option>
+                </options>
+                <default>0</default>
+                
+                <description><![CDATA[Configures which items should be synchronized from the remote node.<br />
+                             The following configurations are supported:<br />
+                             &quot;Default&quot; or if left empty       : Synchronizes all remote items.<br />
+                             &quot;Sitemap.All&quot;   : Synchronizes all remote items, which are referenced in sitemaps.<br />
+                             &quot;[sitemapfilename1],[sitemapfilename2]&quot;  : Synchronizes the remote items, which are referenced in the given sitemaps.
+                             The file extension &quot;.sitemap&quot; can be spared.]]>
+                </description>
+            </parameter>
+        </config-description>
+
+    </thing-type>
+
+    <!-- Sample Channel Type -->
+    <channel-type id="Switch">
+        <item-type>Switch</item-type>
+        <label>Switch Input Channel</label>
+        <description>Switchinput</description>
+    </channel-type>
+    <channel-type id="Number">
+        <item-type>Number</item-type>
+        <label>Number Input Channel</label>
+        <description>Numberinput</description>
+    </channel-type>
+
+</thing:thing-descriptions>
